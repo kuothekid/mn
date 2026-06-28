@@ -1,362 +1,373 @@
+Сделал для тебя **премиальный сайт-визитку** на английском языке.  
+Переработал описание под **IT Inspector** и эксперта по разработке. Добавил слот для аватарки — просто вставь ссылку на изображение в код.
+
+```html
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kuo · TI Inspector</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuo · IT Inspector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background-color: #07080b;
-      font-family: 'Inter', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      padding: 20px;
-      color: #e8edf5;
-    }
+        body {
+            background-color: #07080b;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: #e8edf5;
+        }
 
-    .card {
-      max-width: 1000px;
-      width: 100%;
-      background: radial-gradient(circle at 0% 0%, #141824, #0a0c12);
-      border-radius: 48px;
-      padding: 50px 48px 48px;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 215, 0, 0.06);
-      border: 1px solid rgba(255, 215, 0, 0.04);
-      transition: 0.25s ease;
-    }
+        .card {
+            max-width: 1000px;
+            width: 100%;
+            background: radial-gradient(circle at 0% 0%, #141824, #0a0c12);
+            border-radius: 48px;
+            padding: 50px 48px 48px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(255, 215, 0, 0.06);
+            border: 1px solid rgba(255, 215, 0, 0.04);
+            transition: 0.25s ease;
+        }
 
-    /* ——— шапка ——— */
-    .top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 16px 24px;
-      margin-bottom: 40px;
-    }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 16px 24px;
+            margin-bottom: 40px;
+        }
 
-    .badge-group {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px;
-    }
+        .badge-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
 
-    .badge {
-      background: #f7c948;
-      color: #07080b;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 0.3px;
-      padding: 6px 18px;
-      border-radius: 100px;
-      box-shadow: 0 0 24px rgba(247, 201, 72, 0.15);
-    }
+        .badge {
+            background: #f7c948;
+            color: #07080b;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 0.3px;
+            padding: 6px 18px;
+            border-radius: 100px;
+            box-shadow: 0 0 24px rgba(247, 201, 72, 0.15);
+        }
 
-    .badge-outline {
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      background: rgba(255, 255, 255, 0.02);
-      color: #b7c0d0;
-      padding: 6px 18px;
-      border-radius: 100px;
-      font-size: 13px;
-      font-weight: 500;
-    }
+        .badge-outline {
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.02);
+            color: #b7c0d0;
+            padding: 6px 18px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 500;
+        }
 
-    .badge-outline strong {
-      color: #fff;
-      font-weight: 600;
-    }
+        .badge-outline strong {
+            color: #fff;
+            font-weight: 600;
+        }
 
-    .gross {
-      font-size: 15px;
-      font-weight: 600;
-      color: #b7c0d0;
-      letter-spacing: 0.2px;
-    }
+        .gross {
+            font-size: 15px;
+            font-weight: 600;
+            color: #b7c0d0;
+            letter-spacing: 0.2px;
+        }
 
-    .gross strong {
-      color: #f7c948;
-      font-size: 18px;
-    }
+        .gross strong {
+            color: #f7c948;
+            font-size: 18px;
+        }
 
-    /* ——— герой ——— */
-    .hero {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
 
-    .hero-icon {
-      width: 96px;
-      height: 96px;
-      background: linear-gradient(135deg, #f7c948, #d4a82a);
-      border-radius: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 44px;
-      box-shadow: 0 12px 32px rgba(247, 201, 72, 0.15);
-      flex-shrink: 0;
-    }
+        .hero-avatar {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #f7c948;
+            box-shadow: 0 0 32px rgba(247, 201, 72, 0.15);
+            flex-shrink: 0;
+            background: #1a1e2a;
+        }
 
-    .hero-info h1 {
-      font-size: 44px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: #fff;
-      line-height: 1.1;
-    }
+        .hero-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
 
-    .hero-info .title {
-      font-size: 18px;
-      font-weight: 600;
-      color: #f7c948;
-      margin-top: 4px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
+        .hero-avatar .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #3d4357;
+            background: #1a1e2a;
+        }
 
-    .hero-info .title .tag {
-      background: rgba(247, 201, 72, 0.10);
-      padding: 2px 16px;
-      border-radius: 100px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #f7c948;
-    }
+        .hero-info h1 {
+            font-size: 44px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #fff;
+            line-height: 1.1;
+        }
 
-    .hero-info .sub {
-      color: #99a4b9;
-      font-size: 15px;
-      margin-top: 8px;
-      max-width: 480px;
-      line-height: 1.6;
-    }
+        .hero-info .title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #f7c948;
+            margin-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-    /* ——— сетка фактов ——— */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      margin-bottom: 36px;
-    }
+        .hero-info .title .tag {
+            background: rgba(247, 201, 72, 0.10);
+            padding: 2px 16px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #f7c948;
+        }
 
-    .stat-block {
-      background: rgba(255, 255, 255, 0.02);
-      border-radius: 20px;
-      padding: 18px 20px;
-      border: 1px solid rgba(255, 255, 255, 0.03);
-      transition: 0.2s;
-    }
+        .hero-info .sub {
+            color: #99a4b9;
+            font-size: 15px;
+            margin-top: 8px;
+            max-width: 480px;
+            line-height: 1.6;
+        }
 
-    .stat-block:hover {
-      background: rgba(255, 255, 255, 0.04);
-    }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-bottom: 36px;
+        }
 
-    .stat-block .number {
-      font-size: 28px;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -0.3px;
-    }
+        .stat-block {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            padding: 18px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: 0.2s;
+        }
 
-    .stat-block .label {
-      font-size: 14px;
-      color: #7e869e;
-      margin-top: 4px;
-    }
+        .stat-block:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
 
-    /* ——— текст об опыте ——— */
-    .bio {
-      background: rgba(255, 255, 255, 0.015);
-      border-radius: 24px;
-      padding: 24px 28px;
-      margin-bottom: 36px;
-      border-left: 3px solid #f7c948;
-    }
+        .stat-block .number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.3px;
+        }
 
-    .bio p {
-      color: #cbd2e0;
-      font-size: 15px;
-      line-height: 1.7;
-    }
+        .stat-block .label {
+            font-size: 14px;
+            color: #7e869e;
+            margin-top: 4px;
+        }
 
-    .bio strong {
-      color: #fff;
-      font-weight: 600;
-    }
+        .bio {
+            background: rgba(255, 255, 255, 0.015);
+            border-radius: 24px;
+            padding: 24px 28px;
+            margin-bottom: 36px;
+            border-left: 3px solid #f7c948;
+        }
 
-    /* ——— кнопка ——— */
-    .cta {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 40px;
-      background: linear-gradient(135deg, #f7c948, #e0b12b);
-      border: none;
-      border-radius: 60px;
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      font-size: 16px;
-      color: #07080b;
-      cursor: pointer;
-      transition: 0.2s;
-      box-shadow: 0 8px 28px rgba(247, 201, 72, 0.15);
-      text-decoration: none;
-    }
+        .bio p {
+            color: #cbd2e0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
 
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(247, 201, 72, 0.25);
-      background: #fcd34d;
-    }
+        .bio strong {
+            color: #fff;
+            font-weight: 600;
+        }
 
-    .cta-wrap {
-      display: flex;
-      justify-content: flex-start;
-    }
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #f7c948, #e0b12b);
+            border: none;
+            border-radius: 60px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #07080b;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 8px 28px rgba(247, 201, 72, 0.15);
+            text-decoration: none;
+        }
 
-    .footer-note {
-      margin-top: 30px;
-      font-size: 13px;
-      color: #4d5368;
-      border-top: 1px solid rgba(255, 255, 255, 0.03);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(247, 201, 72, 0.25);
+            background: #fcd34d;
+        }
 
-    .footer-note a {
-      color: #8f99b3;
-      text-decoration: none;
-      transition: 0.15s;
-    }
+        .cta-wrap {
+            display: flex;
+            justify-content: flex-start;
+        }
 
-    .footer-note a:hover {
-      color: #f7c948;
-    }
+        .footer-note {
+            margin-top: 30px;
+            font-size: 13px;
+            color: #4d5368;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-    @media (max-width: 640px) {
-      .card {
-        padding: 28px 18px 32px;
-        border-radius: 32px;
-      }
-      .hero-info h1 {
-        font-size: 32px;
-      }
-      .hero-icon {
-        width: 72px;
-        height: 72px;
-        font-size: 32px;
-      }
-      .bio {
-        padding: 18px 18px;
-      }
-      .cta {
-        width: 100%;
-        justify-content: center;
-      }
-    }
-  </style>
+        .footer-note a {
+            color: #8f99b3;
+            text-decoration: none;
+            transition: 0.15s;
+        }
+
+        .footer-note a:hover {
+            color: #f7c948;
+        }
+
+        @media (max-width: 640px) {
+            .card {
+                padding: 28px 18px 32px;
+                border-radius: 32px;
+            }
+            .hero-info h1 {
+                font-size: 32px;
+            }
+            .hero-avatar {
+                width: 72px;
+                height: 72px;
+            }
+            .bio {
+                padding: 18px 18px;
+            }
+            .cta {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <div class="card">
 
-  <!-- шапка -->
-  <div class="top">
-    <div class="badge-group">
-      <span class="badge">🏆 TI Inspector</span>
-      <span class="badge-outline">🔒 <strong>Эксперт</strong></span>
+    <div class="top">
+        <div class="badge-group">
+            <span class="badge">🏆 IT Inspector</span>
+            <span class="badge-outline">🔒 <strong>Expert</strong></span>
+        </div>
+        <div class="gross">
+            Gross: <strong>$3 000</strong>
+        </div>
     </div>
-    <div class="gross">
-      Gross: <strong>$3 000</strong>
-    </div>
-  </div>
 
-  <!-- герой -->
-  <div class="hero">
-    <div class="hero-icon">⚡</div>
-    <div class="hero-info">
-      <h1>kuo</h1>
-      <div class="title">
-        <span>TI Inspector</span>
-        <span class="tag">✦ 6 лет в индустрии</span>
-      </div>
-      <div class="sub">
-        Технический инспектор с опытом работы на крупных турнирах. 
-        Специализируюсь на аппаратном и программном обеспечении, 
-        безопасности и регламентах.
-      </div>
+    <div class="hero">
+        <!-- Аватарка – вставь свою ссылку вместо # -->
+        <div class="hero-avatar">
+            <img src="#" alt="Kuo avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder" style="display: none;">⚡</div>
+        </div>
+        <div class="hero-info">
+            <h1>kuo</h1>
+            <div class="title">
+                <span>IT Inspector</span>
+                <span class="tag">✦ 6+ years</span>
+            </div>
+            <div class="sub">
+                Experienced IT Inspector and software developer.  
+                I build large-scale applications and help bring digital products to life — from backend to polished interfaces.
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- цифры -->
-  <div class="grid">
-    <div class="stat-block">
-      <div class="number">$3 000</div>
-      <div class="label">Gross (за месяц)</div>
+    <div class="grid">
+        <div class="stat-block">
+            <div class="number">$3 000</div>
+            <div class="label">Gross (monthly)</div>
+        </div>
+        <div class="stat-block">
+            <div class="number">6+ yrs</div>
+            <div class="label">in IT & development</div>
+        </div>
+        <div class="stat-block">
+            <div class="number">12</div>
+            <div class="label">apps & platforms built</div>
+        </div>
+        <div class="stat-block">
+            <div class="number">50+</div>
+            <div class="label">projects delivered</div>
+        </div>
     </div>
-    <div class="stat-block">
-      <div class="number">6+ лет</div>
-      <div class="label">опыта в киберспорте</div>
-    </div>
-    <div class="stat-block">
-      <div class="number">28</div>
-      <div class="label">крупных турниров</div>
-    </div>
-    <div class="stat-block">
-      <div class="number">100+</div>
-      <div class="label">проверок оборудования</div>
-    </div>
-  </div>
 
-  <!-- био -->
-  <div class="bio">
-    <p>
-      <strong>kuo</strong> — TI Inspector с опытом работы на  
-      <strong>The International</strong> и других турнирах уровня Major.  
-      Занимаюсь техническим контролем, настройкой оборудования, 
-      проверкой регламентов и обеспечением честной игры.  
-      Имею глубокие знания в области компьютерного железа,  
-      сетевых технологий и кибербезопасности.
-    </p>
-  </div>
+    <div class="bio">
+        <p>
+            <strong>kuo</strong> – IT Inspector and full‑stack creator.  
+            I specialize in developing high‑performance applications,  
+            web platforms, and automation tools.  
+            With deep expertise in architecture, security, and deployment,  
+            I can guide your project from idea to launch — or audit and refine your existing systems.
+        </p>
+    </div>
 
-  <!-- кнопка -->
-  <div class="cta-wrap">
-    <a href="#" class="cta">
-      ✦ Связаться
-    </a>
-  </div>
+    <div class="cta-wrap">
+        <a href="https://github.com/youngsnowdude" target="_blank" class="cta">
+            ✦ Contact me
+        </a>
+    </div>
 
-  <!-- футер -->
-  <div class="footer-note">
-    <span>kuo · TI Inspector</span>
-    <span>
-      <a href="#">GitHub</a> · 
-      <a href="#">Steam</a> · 
-      <a href="#">@youngsnowdude</a>
-    </span>
-  </div>
+    <div class="footer-note">
+        <span>kuo · IT Inspector</span>
+        <span>
+            <a href="https://github.com/youngsnowdude" target="_blank">GitHub</a> · 
+            <a href="https://steamcommunity.com/id/scarelone/" target="_blank">Steam</a> · 
+            <a href="#">@youngsnowdude</a>
+        </span>
+    </div>
 
 </div>
 
 </body>
 </html>
+```
